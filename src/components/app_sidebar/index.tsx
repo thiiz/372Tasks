@@ -42,7 +42,7 @@ const items = [
 
 export function AppSidebar() {
     const pathname = usePathname()
-    const { open, setOpen, isMobile, setOpenMobile } = useSidebar()
+    const { open, isMobile, setOpenMobile } = useSidebar()
     console.log("state: ", open)
     useEffect(() => {
         if (isMobile) {
