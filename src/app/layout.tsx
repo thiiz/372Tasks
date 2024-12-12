@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app_sidebar";
 
-const robotoSans = Roboto({
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
+const poppinsSans = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
@@ -23,10 +25,15 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${robotoSans.variable} antialiased`}
+        className={`${poppinsSans.variable} antialiased`}
       >
-        <Header />
-        {children}
+        <SidebarProvider>
+          <Header />
+          <AppSidebar />
+          <main className="mt-20">
+            {children}
+          </main>
+        </SidebarProvider>
       </body>
     </html>
   );
