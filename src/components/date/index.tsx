@@ -9,7 +9,7 @@ export const DateComponent = () => {
     }).format(today);
 
     return (
-        <div className="text-xs sm:text-base flex flex-col px-1">
+        <div className="text-xs sm:text-sm flex flex-col px-1">
             <span className="font-bold capitalize leading-5 tracking-wide">
                 {weekday}
             </span>

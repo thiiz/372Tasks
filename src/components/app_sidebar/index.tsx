@@ -49,10 +49,9 @@ export function AppSidebar() {
             setOpenMobile(false)
         }
     }, [pathname])
-    console.log(pathname);
     return (
 
-        <Sidebar className="mt-[8.8rem] xl:mt-20" variant="sidebar">
+        <Sidebar className="mt-[8.8rem] xl:mt-20 w-80" variant="sidebar">
 
             <SidebarContent className="bg-theme-primary text-secondary !rounded-r-xl">
 

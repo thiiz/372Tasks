@@ -1,37 +1,21 @@
+import { AddButton } from "@/components/add_button";
+import { ProgressBar } from "@/components/progessbar";
 import { TaskCard } from "@/components/task_card";
-
+import { TasksComponent } from "@/components/tasks";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Clipboard, Clock, Plus } from "lucide-react";
 export default function DashboardPage() {
+  const currentDate = new Date();
+  const formattedDate = `${currentDate.getDate()} de ${currentDate.toLocaleString("pt-BR", {
+    month: "long",
+  })}`;
   return (
-    <div className="w-full px-5 sm:px-16 my-10">
-      <div className="border-4 grid grid-cols-2 grid-rows-2 border-gray-300 rounded-md p-12">
-        <div className="sm:px-2 px-10 py-2 shadow-lg w-full">
-          <div className="sm:p-4 p-8">
-            <div className="flex items-center justify-between">
-              <div>
-                <span>icon</span>
-                <span>TAREFAS</span>
-              </div>
-              <button>adicionar tarefa</button>
-            </div>
-            <div className="flex items-start space-x-4 font-medium ">
-              <span>20 Junho</span>
-              <div className="text-gray-400 flex items-baseline">
-                <span className="relative capitalize before:w-1 before:h-1 before:bg-gray-400 before:rounded-full before:absolute before:-left-2 before:bottom-2">hoje</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col w-full items-center space-y-4">
-            <TaskCard />
-          </div>
-
-
-
-        </div>
-        <div className="shadow-lg border-gray-300 rounded-md p-12">
-
-        </div>
+    <div className="w-full px-4 xl:pl-[7rem] xl:pr-12 my-10 inline-flex">
+      <div className="xl:border-4 mt-6 xl:mt-0 grid xl:grid-cols-2 xl:grid-rows-2 max-h-[51rem] xl:border-gray-300 rounded-md xl:p-12">
+        <TasksComponent />
+        <ProgressBar className="row-span-1 hidden xl:grid xl:grid-cols-3 xl:grid-rows-3 xl:gap-1 xl:justify-between xl:items-start xl:shadow-lg xl:border-gray-300 xl:rounded-md 
+        xl:px-5 px-10 py-2 w-full p-[6.5rem]"/>
       </div>
-    </div>
+    </div >
   );
 }
