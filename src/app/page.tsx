@@ -2,10 +2,6 @@ import { ProgressBar } from "@/components/progessbar";
 import { TasksComponent } from "@/components/tasks";
 
 export default function DashboardPage() {
-  const currentDate = new Date();
-  const formattedDate = `${currentDate.getDate()} de ${currentDate.toLocaleString("pt-BR", {
-    month: "long",
-  })}`;
   return (
     <div className="w-full px-4 xl:pl-[7rem] xl:pr-12 my-10 inline-flex">
       <div className="xl:border-4 mt-6 xl:mt-0 grid xl:grid-cols-2 xl:grid-rows-2 max-h-[51rem] xl:border-gray-300 rounded-md xl:p-12">
