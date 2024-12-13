@@ -1,8 +1,9 @@
 import { ScrollArea } from "@radix-ui/react-scroll-area"
-import { TaskCard } from "../task_card"
+import { TaskCard } from "@/components/task_card"
 import { Clipboard, Clock } from "lucide-react"
-import { AddButton } from "../add_button"
-import { ProgressBar } from "../progessbar"
+import { AddButton } from "@/components/add_button"
+import { ProgressBar } from "@/components/progessbar"
+import { AddTask } from "../add_task"
 
 export const TasksComponent = () => {
     const currentDate = new Date();

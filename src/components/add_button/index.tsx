@@ -12,6 +12,7 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
+import { AddTask } from "@/components/add_task"
 export const AddButton = () => {
     return (
         <AlertDialog>
@@ -23,10 +24,7 @@ export const AddButton = () => {
             <AlertDialogContent>
                 <AlertDialogHeader>
                     <AlertDialogTitle>Adicionar Tarefa</AlertDialogTitle>
-                    <div className="text-base h-[30rem] flex flex-1">
-                        This action cannot be undone. This will permanently delete your account
-                        and remove your data from our servers.
-                    </div>
+                    <AddTask />
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                     <AlertDialogCancel>Cancel</AlertDialogCancel>

@@ -1,9 +1,6 @@
-import { AddButton } from "@/components/add_button";
 import { ProgressBar } from "@/components/progessbar";
-import { TaskCard } from "@/components/task_card";
 import { TasksComponent } from "@/components/tasks";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Clipboard, Clock, Plus } from "lucide-react";
+
 export default function DashboardPage() {
   const currentDate = new Date();
   const formattedDate = `${currentDate.getDate()} de ${currentDate.toLocaleString("pt-BR", {
